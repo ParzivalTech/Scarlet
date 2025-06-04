@@ -22,7 +22,6 @@ qt_add_qml_module(appScarlet
         RESOURCES
         RESOURCES
         QML_FILES ApplicationFlow.qml
-        RESOURCES ApplicationFlowForm.ui
         QML_FILES ApplicationFlowForm.ui.qml
 )
 
