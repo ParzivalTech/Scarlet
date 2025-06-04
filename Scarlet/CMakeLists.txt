@@ -17,6 +17,13 @@ qt_add_qml_module(appScarlet
     VERSION 1.0
     QML_FILES
         Main.qml
+        RESOURCES
+        QML_FILES
+        RESOURCES
+        RESOURCES
+        QML_FILES ApplicationFlow.qml
+        RESOURCES ApplicationFlowForm.ui
+        QML_FILES ApplicationFlowForm.ui.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

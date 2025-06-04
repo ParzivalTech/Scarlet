@@ -2,3 +2,7 @@
 Scarlet/build/
 
 build/
+
+.idea/
+
+cmake-build-debug/
