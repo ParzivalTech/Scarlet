@@ -24,6 +24,12 @@ qt_add_qml_module(appScarlet
         QML_FILES ApplicationFlow.qml
         QML_FILES ApplicationFlowForm.ui.qml
         QML_FILES HomeToolBar.ui.qml
+        QML_FILES HomeForm.ui.qml
+        QML_FILES Home.qml
+        QML_FILES CustomButtonForm.ui.qml
+        QML_FILES CustomButton.qml
+        RESOURCES images.qrc
+        QML_FILES Colors.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

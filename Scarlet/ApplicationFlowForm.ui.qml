@@ -1,37 +1,35 @@
 import QtQuick
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 2.15
+import QtQuick.Controls.Basic
 
 Rectangle {
     id: root
+    color: Colors.currentTheme.background
     property alias homeToolBar: homeToolBar
+    property alias home: home
+    property alias stack: stack
     anchors.topMargin: parent.height / 20
-    // ToolBar {
-    //     id: homeToolBar
-    //     x: 0
-    //     height: 40
-    //     anchors.left: parent.left
-    //     anchors.right: parent.right
-    //     layer.format: ShaderEffectSource.Alpha
-    //     contentHeight: toolButton.implicitHeight
-    //     background: Rectangle {
-    //         id: toolbarColor
-    //         color: "#FF2400"
-    //     }
 
-    //     Text {
-    //         id: _text
-    //         text: qsTr("Hello, Scarlet")
-    //         anchors.verticalCenter: parent.verticalCenter
-    //         font.pixelSize: 25
-    //         font.bold: true
-    //         anchors.horizontalCenter: parent.horizontalCenter
-    //     }
-    // }
     HomeToolBar {
         id: homeToolBar
-        anchors.topMargin: parent.height / 80
+        anchors.bottomMargin: parent.height / 80
         width: parent.width
         height: 35
+        anchors.bottom: parent.bottom
+    }
+
+    StackView {
+        id: stack
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.topMargin: parent.height / 20
+        initialItem: Home {
+            id: home
+            visible: true
+            state: applicationFlow.mode
+        }
     }
 }
