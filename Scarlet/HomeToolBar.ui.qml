@@ -12,21 +12,14 @@ Item {
     id: root
     property alias backButton: backButton
     property alias themeButton: themeButton
-    property alias logo: logo
 
-    Text {
-        id: banner
-        text: qsTr("Hello, Scarlet")
-        color: 'red'
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.bold: true
-    }
-
+    //property alias logo: logo
     Button {
         id: backButton
+        anchors.left: parent.left
+        anchors.leftMargin: 20
         icon.color: (Colors.currentTheme == Colors.dark) ? "#FFFFFF" : "#121111"
-        icon.source: "images/what.jpg"
+        icon.source: "images/profile-icon.svg"
         flat: true
         background: null
         transitions: Transition {
@@ -38,18 +31,22 @@ Item {
         }
     }
 
-    Image {
-        id: logo
-        source: "images/what.jpg"
-        Layout.alignment: Qt.AlignCenter
-        sourceSize.width: height * 1.4
-        sourceSize.height: 25
+    Text {
+        id: banner
+        text: qsTr("Hello, Scarlet")
+        color: 'red'
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        font.bold: true
     }
+
     Button {
         id: themeButton
+        anchors.right: parent.right
         Layout.alignment: Qt.AlignRight
+        anchors.rightMargin: 20
         icon.color: (Colors.currentTheme == Colors.dark) ? "#DDE2E8" : "#667085"
-        icon.source: (Colors.currentTheme == Colors.dark) ? "images/what.jpg" : "images/what.jpg"
+        icon.source: "images/theme-light.svg"
         flat: true
         background: null
         transitions: Transition {

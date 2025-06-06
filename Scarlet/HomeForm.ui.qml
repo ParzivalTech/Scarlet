@@ -10,6 +10,40 @@ Item {
     property alias grid: grid
     property alias header: header
 
+    GridLayout {
+        id: grid
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.top: home.top
+        anchors.topMargin: 200
+        flow: GridLayout.TopToBottom
+        Image {
+            id: imageHome
+            Layout.preferredHeight: home.height / 3
+            Layout.preferredWidth: height / 1.16
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+            Layout.margins: 5
+            source: (Colors.currentTheme
+                     == Colors.dark) ? "images/sword-dark.svg" : "images/sword-icon.svg"
+        }
+        Text {
+            id: header
+            text: qsTr("Stabby Stab")
+            font.pixelSize: 32
+            font.weight: 700
+            color: Colors.currentTheme.textColor
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+            Layout.topMargin: 20
+        }
+
+        CustomButton {
+            id: getStartedButton
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+            Layout.minimumWidth: 150
+            Layout.minimumHeight: 40
+            buttonText: "Get Started"
+        }
+    }
+
     states: [
         State {
             name: "portrait"
@@ -42,43 +76,4 @@ Item {
             }
         }
     ]
-
-    CustomButton {
-        id: profile
-        anchors.right: parent.right
-        icon.name: "profile-icon"
-        icon.source: "images/what.jpg"
-    }
-
-    GridLayout {
-        id: grid
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.top: home.top
-        flow: GridLayout.TopToBottom
-        Image {
-            id: image
-            Layout.preferredHeight: home.height / 3
-            Layout.preferredWidth: height / 1.16
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-            Layout.margins: 5
-            source: (Colors.currentTheme == Colors.dark) ? "./images/Cups/home_dark.svg" : "./images/Cups/home_light.svg"
-        }
-        Text {
-            id: header
-            text: qsTr("Coffee Machine")
-            font.pixelSize: 32
-            font.weight: 700
-            color: Colors.currentTheme.textColor
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-            Layout.topMargin: 20
-        }
-
-        CustomButton {
-            id: getStartedButton
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-            Layout.minimumWidth: 150
-            Layout.minimumHeight: 40
-            buttonText: "Get Started"
-        }
-    }
 }

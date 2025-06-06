@@ -15,10 +15,6 @@ ApplicationFlowForm {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.topMargin: parent.height / 20
-
-        Rectangle {
-
-        }
     }
 
 
@@ -122,6 +118,5 @@ ApplicationFlowForm {
                 anchors.top: coffeeText.bottom
             }
         }
-
     ]
 }

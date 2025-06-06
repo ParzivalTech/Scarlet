@@ -50,7 +50,7 @@ AbstractButton {
                 id: icon
                 visible: showIcon
                 source: (Colors.currentTheme
-                         == Colors.dark) ? "./images/what.jpg" : "./images/what.jpg"
+                         == Colors.dark) ? "./images/dark-theme.svg" : "./images/light-theme.svg"
             }
         }
     }
