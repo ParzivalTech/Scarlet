@@ -10,12 +10,12 @@ Item {
     // that do not seem to have any logical origin are just arbitrary and based on original design
     // and/or personal preference on what looks nice.
     id: root
-    property alias backButton: backButton
+    property alias backButton: profileButton
     property alias themeButton: themeButton
 
     //property alias logo: logo
     Button {
-        id: backButton
+        id: profileButton
         anchors.left: parent.left
         anchors.leftMargin: 20
         icon.color: (Colors.currentTheme == Colors.dark) ? "#FFFFFF" : "#121111"

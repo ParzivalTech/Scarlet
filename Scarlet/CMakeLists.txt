@@ -30,6 +30,8 @@ qt_add_qml_module(appScarlet
         QML_FILES CustomButtonForm.ui.qml
         QML_FILES CustomButton.qml
         QML_FILES Colors.qml
+        QML_FILES Profile.qml
+        QML_FILES ProfileForm.ui.qml
     RESOURCES
         images.qrc
         images/what.jpg
@@ -38,6 +40,7 @@ qt_add_qml_module(appScarlet
         RESOURCES images/theme-dark.svg images/theme-light.svg
         RESOURCES images/lizard.svg
         RESOURCES images/sword-dark.svg
+
 
 )
 
