@@ -12,11 +12,33 @@ qt_add_executable(appScarlet
     main.cpp
 )
 
+set_source_files_properties(Colors.qml PROPERTIES
+    QT_QML_SINGLETON_TYPE TRUE
+)
+
 qt_add_qml_module(appScarlet
     URI Scarlet
     VERSION 1.0
     QML_FILES
         Main.qml
+        QML_FILES ApplicationFlow.qml
+        QML_FILES ApplicationFlowForm.ui.qml
+        QML_FILES HomeToolBar.qml
+        QML_FILES HomeToolBarForm.ui.qml
+        QML_FILES HomeForm.ui.qml
+        QML_FILES Home.qml
+        QML_FILES CustomButtonForm.ui.qml
+        QML_FILES CustomButton.qml
+        QML_FILES Colors.qml
+    RESOURCES
+        images.qrc
+        images/what.jpg
+        RESOURCES images/profile-icon.svg
+        RESOURCES images/sword-icon.svg
+        RESOURCES images/theme-dark.svg images/theme-light.svg
+        RESOURCES images/lizard.svg
+        RESOURCES images/sword-dark.svg
+
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
