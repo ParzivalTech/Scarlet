@@ -21,10 +21,10 @@ qt_add_qml_module(appScarlet
     VERSION 1.0
     QML_FILES
         Main.qml
-        QML_FILES
         QML_FILES ApplicationFlow.qml
         QML_FILES ApplicationFlowForm.ui.qml
-        QML_FILES HomeToolBar.ui.qml
+        QML_FILES HomeToolBar.qml
+        QML_FILES HomeToolBarForm.ui.qml
         QML_FILES HomeForm.ui.qml
         QML_FILES Home.qml
         QML_FILES CustomButtonForm.ui.qml

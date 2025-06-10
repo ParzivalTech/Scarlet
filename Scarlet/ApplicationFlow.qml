@@ -17,6 +17,14 @@ ApplicationFlowForm {
         anchors.topMargin: parent.height / 20
     }
 
+    function themeButton()
+    {
+        if (Colors.currentTheme == Colors.dark){
+            Colors.currentTheme = Colors.light
+        } else {
+            Colors.currentTheme = Colors.dark
+        }
+    }
 
     //! [States]
     states: [
